@@ -1,0 +1,98 @@
+{
+    "dodoma": {
+        "lat": " -3.3667",
+        "lon": "36.6833 ",
+        "day_1": {
+            "dt": "1633002950",
+            "sunsrise": "1632972144",
+            "sunset": "1633015892",
+            "temp": "31",
+            "min": "31",
+            "max": "31",
+            "pressure": "1008",
+            "humidity": "23",
+            "wind_speed": "4.03",
+            "main": "clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        },
+        "day_2": {
+            "dt": "1633002950",
+            "sunsrise": "1632972144",
+            "sunset": "1633015892",
+            "temp": "31",
+            "min": "31",
+            "max": "31",
+            "pressure": "1008",
+            "humidity": "23",
+            "wind_speed": "4.03",
+            "main": "clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    },
+    "arusha": {
+        "lat": " -3.3667",
+        "lon": "36.6833 ",
+        "day_1": {
+            "dt": "1633002950",
+            "sunsrise": "1632972144",
+            "sunset": "1633015892",
+            "temp": "31",
+            "min": "31",
+            "max": "31",
+            "pressure": "1008",
+            "humidity": "23",
+            "wind_speed": "4.03",
+            "main": "clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        },
+        "day_2": {
+            "dt": "1633002950",
+            "sunsrise": "1632972144",
+            "sunset": "1633015892",
+            "temp": "31",
+            "min": "31",
+            "max": "31",
+            "pressure": "1008",
+            "humidity": "23",
+            "wind_speed": "4.03",
+            "main": "clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    },
+    "mwanza": {
+        "lat": "-2.5167",
+        "lon": "32.9",
+        "day_1": {
+            "dt": "",
+            "sunsrise": "",
+            "sunset": "",
+            "temp": "",
+            "min": "",
+            "max": "",
+            "pressure": "",
+            "humidity": "",
+            "wind_speed": "",
+            "main": "clouds",
+            "description": "",
+            "icon": "04d"
+        },
+        "day_2": {
+            "dt": "",
+            "sunsrise": "",
+            "sunset": "",
+            "temp": "",
+            "min": "",
+            "max": "",
+            "pressure": "",
+            "humidity": "",
+            "wind_speed": "",
+            "main": "clouds",
+            "description": "",
+            "icon": "04d"
+        }
+    }
+}
