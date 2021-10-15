@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block home %}current-menu-item {% endblock %}
+{% block content %}
+
+<div class="hero" data-bg-image="{{ url_for('static', filename='images/banner.png' ) }}">
+
+</div>
+<main class="main-content">
+
+    <div class="forecast-table">
+        <div class="container">
+            <div class="forecast-container">
+                <div class="today forecast">
+                    <div class="forecast-header">
+                        <div class="day">Today
+
+                        </div>
+                        <div class="date"> {{ datetime }}</div>
+                    </div> <!-- .forecast-header -->
+                    <div class="forecast-content">
+                        <div class="location">{{ region.capitalize() }}</div>
+                        <div class="degree">
+                            <div class="num">{{ weather_data["temp"]["day"]|round|int }}<sup>o</sup>C</div>
+
+                        </div>
+
+                        <span><img src="http://openweathermap.org/img/w/{{ weather_data['weather'][0]['icon'] }}.png"
+                                   alt="">
+                                     {{ weather_data["weather"][0]["main"] }} , {{ weather_data["weather"][0]["description"] }}
+                                 </span>
+                        <div class="more_weather">
+                            <br>
+                            <span>  <i class="fas fa-cloud-sun"></i>
+                                    Sunrise at {{ sunrise }}
+                                </span>
+
+                            <span>  <i class="fas fa-cloud-sun"></i> Sunset at {{ sunset }}</span>
+                            <br>
+                            <br>
+                            <span>  <i class="fas fa-wind"> </i> wind speed {{ weather_data["wind_speed"] }} miles/hour</span>
+                            <br>
+                            <br>
+                            <span>  <i class="fas fa-thermometer-three-quarters fa-lg"> </i>
+								Max Temp
+	                             {{ weather_data["temp"]["max"]|round|int }}<sup>o</sup>C</span>
+                            <br><br>
+                            <span>  <i class="fas fa-thermometer-quarter fa-lg"> </i>
+                                    Min Temp
+								{{ weather_data["temp"]["min"]|round|int }}
+	                             <sup>o</sup>c</span>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="today forecast">
+                    <div class="forecast-header">
+                        <div class="day">Tomorrow
+
+                        </div>
+                        <div class="date"> {{ datetime_tom }}</div>
+                    </div> <!-- .forecast-header -->
+                    <div class="forecast-content">
+                        <div class="location">{{ region.capitalize() }}</div>
+                        <div class="degree">
+                            <div class="num">{{ weather_tom["temp"]["day"]|round|int }}<sup>o</sup>C</div>
+
+                        </div>
+                        <span><img src="http://openweathermap.org/img/w/{{ weather_tom['weather'][0]['icon'] }}.png"
+                                   alt="">
+                                     {{ weather_tom["weather"][0]["main"] }} , {{ weather_tom["weather"][0]["description"] }}
+                                 </span>
+                        <div class="more_weather">
+
+                            <br>
+                            <span>  <i class="fas fa-cloud-sun"></i>
+                                    Sunrise at {{ sunrise_tom }}
+                                </span>
+
+                            <span>  <i class="fas fa-cloud-sun"></i> Sunset at {{ sunset_tom }}</span>
+                            <br>
+                            <br>
+                            <span>  <i
+                                    class="fas fa-wind"> </i> wind speed {{ weather_tom["wind_speed"] }} miles/hour</span>
+                            <br>
+                            <br>
+                            <span>  <i class="fas fa-thermometer-three-quarters fa-lg"> </i>
+								Max Temp
+	                             {{ weather_tom["temp"]["max"]|round|int }}<sup>o</sup>C</span>
+                            <br><br>
+                            <span>  <i class="fas fa-thermometer-quarter fa-lg"> </i>
+                                    Min Temp
+								{{ weather_tom["temp"]["min"]|round|int }}
+	                             <sup>o</sup>c</span>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fullwidth-block">
+        <div class="container">
+            <div class="filter">
+                {% for region in all_regions %}
+                <div class="country filter-control hide">
+                    <form action="" method="post" class="contact-form">
+
+                        <input type="hidden" name="region" value="{{ region.name|capitalize }}">
+                        <input type="submit" value="{{ region.name|capitalize }}" placeholder="Send message">
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main> <!-- .main-content -->
+{% endblock %}
